@@ -1,0 +1,3780 @@
+[
+  [
+    {
+      "input": "ma mère habite au 39 rue Professeur Patel à Lyon 9",
+      "expected": {
+        "fullText": "39 rue Professeur Patel à Lyon 9",
+        "voie": "39 rue Professeur Patel",
+        "commune": "Lyon 9e Arrondissement"
+      },
+      "result": {
+        "fullText": "au 39 rue Professeur Patel à Lyon",
+        "voie": "rue Professeur Patel",
+        "commune": "Lyon 9e Arrondissement"
+      },
+      "score": {
+        "fullText": false,
+        "voie": false,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6959.846468999982
+    },
+    {
+      "input": "je bosse rue Magenta à Tassin",
+      "expected": {
+        "fullText": "rue Magenta à Tassin",
+        "voie": "rue Magenta",
+        "commune": "Tassin-la-Demi-Lune"
+      },
+      "result": {
+        "fullText": "rue Magenta à Tassin",
+        "voie": "rue Magenta",
+        "commune": "Tassin-la-Demi-Lune"
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 7271.4683469980955
+    },
+    {
+      "input": "ma tante vit boulevard des Belges à Villeurban",
+      "expected": {
+        "fullText": "boulevard des Belges à Villeurban",
+        "voie": "boulevard des Belges",
+        "commune": "Villeurbanne"
+      },
+      "result": {
+        "fullText": "boulevard des Belges à Villeurban",
+        "voie": "boulevard des Belges",
+        "commune": "Villeurbanne"
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 8799.93965999782
+    },
+    {
+      "input": "je vais souvent au parc rue de Sèze à Lyon 6",
+      "expected": {
+        "fullText": "rue de Sèze à Lyon 6",
+        "voie": "rue de Sèze",
+        "commune": "Lyon 6e Arrondissement"
+      },
+      "result": {
+        "fullText": "parc rue de Sèze à Lyon 6",
+        "voie": "rue de Sèze",
+        "commune": "Lyon 6e Arrondissement"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 9053.372483998537
+    },
+    {
+      "input": "on se retrouve au 23 rue Jean Jaurès à Bron",
+      "expected": {
+        "fullText": "23 rue Jean Jaurès à Bron",
+        "voie": "23 rue Jean Jaurès",
+        "commune": "Bron"
+      },
+      "result": {
+        "fullText": "23 rue Jean Jaurès à Bron",
+        "voie": "rue Jean Jaurès",
+        "commune": "Bron"
+      },
+      "score": {
+        "fullText": true,
+        "voie": false,
+        "commune": true
+      },
+      "error": null,
+      "ms": 7216.719581000507
+    },
+    {
+      "input": "j'ai rendez-vous rue Victor Hugo à Lyon 2e arr",
+      "expected": {
+        "fullText": "rue Victor Hugo à Lyon 2e arr",
+        "voie": "rue Victor Hugo",
+        "commune": "Lyon 2e Arrondissement"
+      },
+      "result": {
+        "fullText": "rue Victor Hugo à Lyon 2e arr",
+        "voie": "rue Victor Hugo",
+        "commune": "Lyon"
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": false
+      },
+      "error": null,
+      "ms": 7312.804879996926
+    },
+    {
+      "input": "ils habitent au 8 allée du Parc à Caluire",
+      "expected": {
+        "fullText": "8 allée du Parc à Caluire",
+        "voie": "8 allée du Parc",
+        "commune": "Caluire-et-Cuire"
+      },
+      "result": {
+        "fullText": "au 8 allée du Parc à Caluire",
+        "voie": "8 allée du Parc",
+        "commune": "Caluire-et-Cuire"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 8872.561633002013
+    },
+    {
+      "input": "je travaille avenue de l'Europe à Mezieu",
+      "expected": {
+        "fullText": "avenue de l'Europe à Mezieu",
+        "voie": "avenue de l'Europe",
+        "commune": "Meyzieu"
+      },
+      "result": {
+        "fullText": "avenue de l'Europe à Meyzieu",
+        "voie": "avenue de l'Europe",
+        "commune": "Meyzieu"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 7842.5343150012195
+    },
+    {
+      "input": "elle habite au 12 rue Franklin Roosevelt à Rieux-la-Pape",
+      "expected": {
+        "fullText": "12 rue Franklin Roosevelt à Rieux-la-Pape",
+        "voie": "12 rue Franklin Roosevelt",
+        "commune": "Rillieux-la-Pape"
+      },
+      "result": {
+        "fullText": "12 rue Franklin Roosevelt à Rieux-la-Pape",
+        "voie": "rue Franklin Roosevelt",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": false,
+        "commune": false
+      },
+      "error": null,
+      "ms": 7275.873239997774
+    },
+    {
+      "input": "je suis passé chez toi au 10 rue Pasteur à Venissieux",
+      "expected": {
+        "fullText": "10 rue Pasteur à Venissieux",
+        "voie": "10 rue Pasteur",
+        "commune": "Vénissieux"
+      },
+      "result": {
+        "fullText": "au 10 rue Pasteur à Venissieux",
+        "voie": "rue Pasteur",
+        "commune": "Vénissieux"
+      },
+      "score": {
+        "fullText": false,
+        "voie": false,
+        "commune": true
+      },
+      "error": null,
+      "ms": 8471.817414999008
+    },
+    {
+      "input": "on a un bureau rue de la Liberté à Saint-Priest",
+      "expected": {
+        "fullText": "rue de la Liberté à Saint-Priest",
+        "voie": "rue de la Liberté",
+        "commune": "Saint-Priest"
+      },
+      "result": {
+        "fullText": "bureau rue de la Liberté à Saint-Priest",
+        "voie": "rue de la Liberté",
+        "commune": "Saint-Priest"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 9029.717833001167
+    },
+    {
+      "input": "ma sœur a une boutique avenue des Tuileries à Lyon 3eme",
+      "expected": {
+        "fullText": "avenue des Tuileries à Lyon 3eme",
+        "voie": "avenue des Tuileries",
+        "commune": "Lyon 3e Arrondissement"
+      },
+      "result": {
+        "fullText": "avenue des Tuileries à Lyon 3eme",
+        "voie": "avenue des Tuileries",
+        "commune": "Lyon"
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": false
+      },
+      "error": null,
+      "ms": 8236.608040001243
+    },
+    {
+      "input": "je connais une bonne boulangerie rue des Acacias à Saint-Fons",
+      "expected": {
+        "fullText": "rue des Acacias à Saint-Fons",
+        "voie": "rue des Acacias",
+        "commune": "Saint-Fons"
+      },
+      "result": {
+        "fullText": "boulangerie rue des Acacias à Saint-Fons",
+        "voie": "rue des Acacias",
+        "commune": "Saint-Fons"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 8371.009991001338
+    },
+    {
+      "input": "il vit au 5 chemin de la Forêt à Dardilli",
+      "expected": {
+        "fullText": "5 chemin de la Forêt à Dardilli",
+        "voie": "5 chemin de la Forêt",
+        "commune": "Dardilly"
+      },
+      "result": {
+        "fullText": "au 5 chemin de la Forêt à Dardilly",
+        "voie": "chemin de la Forêt",
+        "commune": "Dardilly"
+      },
+      "score": {
+        "fullText": false,
+        "voie": false,
+        "commune": true
+      },
+      "error": null,
+      "ms": 8496.891857996583
+    },
+    {
+      "input": "je passe souvent par la rue de la Gare à Chassieu",
+      "expected": {
+        "fullText": "rue de la Gare à Chassieu",
+        "voie": "rue de la Gare",
+        "commune": "Chassieu"
+      },
+      "result": {
+        "fullText": "rue de la Gare à Chassieu",
+        "voie": "rue de la Gare",
+        "commune": "Chassieu"
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 10034.752800002694
+    },
+    {
+      "input": "nous avons acheté une maison rue des Écoles à Vaulx-en-Vallin",
+      "expected": {
+        "fullText": "rue des Écoles à Vaulx-en-Vallin",
+        "voie": "rue des Écoles",
+        "commune": "Vaulx-en-Velin"
+      },
+      "result": {
+        "fullText": "maison rue des Écoles à Vaulx-en-Velin",
+        "voie": "rue des Écoles",
+        "commune": "Vaulx-en-Velin"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 9338.262566998601
+    },
+    {
+      "input": "je me suis perdu rue de Verdun à Lyon 1er",
+      "expected": {
+        "fullText": "rue de Verdun à Lyon 1er",
+        "voie": "rue de Verdun",
+        "commune": "Lyon 1er Arrondissement"
+      },
+      "result": {
+        "fullText": "rue de Verdun à Lyon 1er",
+        "voie": "rue de Verdun",
+        "commune": "Lyon"
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": false
+      },
+      "error": null,
+      "ms": 7579.1098860017955
+    },
+    {
+      "input": "on mange au restaurant rue des Marronniers à Lyon 2",
+      "expected": {
+        "fullText": "rue des Marronniers à Lyon 2",
+        "voie": "rue des Marronniers",
+        "commune": "Lyon 2e Arrondissement"
+      },
+      "result": {
+        "fullText": "restaurant rue des Marronniers à Lyon 2",
+        "voie": "rue des Marronniers",
+        "commune": "Lyon"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": false
+      },
+      "error": null,
+      "ms": 7701.174298997968
+    },
+    {
+      "input": "mon collègue habite rue de la République à Oullin",
+      "expected": {
+        "fullText": "rue de la République à Oullin",
+        "voie": "rue de la République",
+        "commune": "Oullins"
+      },
+      "result": {
+        "fullText": "rue de la République à Oullins",
+        "voie": "rue de la République",
+        "commune": "Oullins"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 9623.358651999384
+    },
+    {
+      "input": "j'ai visité un appartement rue des Pins à Francheville",
+      "expected": {
+        "fullText": "rue des Pins à Francheville",
+        "voie": "rue des Pins",
+        "commune": "Francheville"
+      },
+      "result": {
+        "fullText": "rue des Pins à Francheville",
+        "voie": "rue des Pins",
+        "commune": "Francheville"
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 7496.9145159982145
+    },
+    {
+      "input": "ils ont un atelier rue des Violettes à Decines-Charpieu",
+      "expected": {
+        "fullText": "rue des Violettes à Decines-Charpieu",
+        "voie": "rue des Violettes",
+        "commune": "Décines-Charpieu"
+      },
+      "result": {
+        "fullText": "atelier rue des Violettes à Decines-Charpieu",
+        "voie": "rue des Violettes",
+        "commune": "Decines-Charpieu"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": false
+      },
+      "error": null,
+      "ms": 9221.925225000829
+    },
+    {
+      "input": "je vais à la salle de sport rue du Fort à Sainte-Foy-les-Lyon",
+      "expected": {
+        "fullText": "rue du Fort à Sainte-Foy-les-Lyon",
+        "voie": "rue du Fort",
+        "commune": "Sainte-Foy-lès-Lyon"
+      },
+      "result": {
+        "fullText": "rue du Fort à Sainte-Foy-les-Lyon",
+        "voie": "rue du Fort",
+        "commune": "Sainte-Foy-lès-Lyon"
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 9292.775612000376
+    },
+    {
+      "input": "on a un projet immobilier rue des Rosiers à Tassin-la-Demi Lune",
+      "expected": {
+        "fullText": "rue des Rosiers à Tassin-la-Demi Lune",
+        "voie": "rue des Rosiers",
+        "commune": "Tassin-la-Demi-Lune"
+      },
+      "result": {
+        "fullText": "rue des Rosiers à Tassin-la-Demi-Lune",
+        "voie": "rue des Rosiers",
+        "commune": "Tassin-la-Demi-Lune"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 9840.607659000903
+    },
+    {
+      "input": "elle travaille au 18 avenue des Champs à Lyon 7eme",
+      "expected": {
+        "fullText": "18 avenue des Champs à Lyon 7eme",
+        "voie": "18 avenue des Champs",
+        "commune": "Lyon 7e Arrondissement"
+      },
+      "result": {
+        "fullText": "18 avenue des Champs à Lyon 7e",
+        "voie": "18 avenue des Champs",
+        "commune": "Lyon 7e Arrondissement"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 8724.007337998599
+    },
+    {
+      "input": "je passe souvent par l'avenue des Platanes à Givor",
+      "expected": {
+        "fullText": "avenue des Platanes à Givor",
+        "voie": "avenue des Platanes",
+        "commune": "Givors"
+      },
+      "result": {
+        "fullText": "l'avenue des Platanes à Givors",
+        "voie": "l'avenue des Platanes",
+        "commune": "Givors"
+      },
+      "score": {
+        "fullText": false,
+        "voie": false,
+        "commune": true
+      },
+      "error": null,
+      "ms": 7992.8470220007
+    },
+    {
+      "input": "hier je suis allé manger rue de la République",
+      "expected": {
+        "fullText": "rue de la République",
+        "voie": "rue de la République",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue de la République",
+        "voie": "rue de la République",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 7220.639538999647
+    },
+    {
+      "input": "j'ai déménagé au 15 avenue des Frères Lumière",
+      "expected": {
+        "fullText": "15 avenue des Frères Lumière",
+        "voie": "15 avenue des Frères Lumière",
+        "commune": null
+      },
+      "result": {
+        "fullText": "au 15 avenue des Frères Lumière",
+        "voie": "avenue des Frères Lumière",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": false,
+        "commune": true
+      },
+      "error": null,
+      "ms": 8214.745604999363
+    },
+    {
+      "input": "j'ai trouvé un chat perdu rue du 4 Août",
+      "expected": {
+        "fullText": "rue du 4 Août",
+        "voie": "rue du 4 Août",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue du 4 Août",
+        "voie": "rue du 4 Août",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6747.519602999091
+    },
+    {
+      "input": "je prends le bus rue des Cerisiers",
+      "expected": {
+        "fullText": "rue des Cerisiers",
+        "voie": "rue des Cerisiers",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue des Cerisiers",
+        "voie": "rue des Cerisiers",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6449.554850999266
+    },
+    {
+      "input": "j'adore me promener rue des Jardins",
+      "expected": {
+        "fullText": "rue des Jardins",
+        "voie": "rue des Jardins",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue des Jardins",
+        "voie": "rue des Jardins",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6597.577553998679
+    },
+    {
+      "input": "on se voit au café rue des Alouettes",
+      "expected": {
+        "fullText": "rue des Alouettes",
+        "voie": "rue des Alouettes",
+        "commune": null
+      },
+      "result": {
+        "fullText": "café rue des Alouettes",
+        "voie": "rue des Alouettes",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6936.392473999411
+    },
+    {
+      "input": "elle habite rue du Faubourg",
+      "expected": {
+        "fullText": "rue du Faubourg",
+        "voie": "rue du Faubourg",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue du Faubourg",
+        "voie": "rue du Faubourg",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6398.75253399834
+    },
+    {
+      "input": "je travaille rue de la Mairie",
+      "expected": {
+        "fullText": "rue de la Mairie",
+        "voie": "rue de la Mairie",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue de la Mairie",
+        "voie": "rue de la Mairie",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 7089.213964000344
+    },
+    {
+      "input": "on se retrouve rue des Tilleuls",
+      "expected": {
+        "fullText": "rue des Tilleuls",
+        "voie": "rue des Tilleuls",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue des Tilleuls",
+        "voie": "rue des Tilleuls",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6319.437256000936
+    },
+    {
+      "input": "ils ont une boutique rue de la Poste",
+      "expected": {
+        "fullText": "rue de la Poste",
+        "voie": "rue de la Poste",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue de la Poste",
+        "voie": "rue de la Poste",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 7049.801750000566
+    },
+    {
+      "input": "je vis rue de la Gare",
+      "expected": {
+        "fullText": "rue de la Gare",
+        "voie": "rue de la Gare",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue de la Gare",
+        "voie": "rue de la Gare",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6220.214542001486
+    },
+    {
+      "input": "elle habite rue des Fleurs",
+      "expected": {
+        "fullText": "rue des Fleurs",
+        "voie": "rue des Fleurs",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue des Fleurs",
+        "voie": "rue des Fleurs",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 5818.940464999527
+    },
+    {
+      "input": "je vais souvent au marché rue des Artisans",
+      "expected": {
+        "fullText": "rue des Artisans",
+        "voie": "rue des Artisans",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue des Artisans",
+        "voie": "rue des Artisans",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 7130.8165539987385
+    },
+    {
+      "input": "on a une réunion rue de l'Église",
+      "expected": {
+        "fullText": "rue de l'Église",
+        "voie": "rue de l'Église",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue de l'Église",
+        "voie": "rue de l'Église",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 8823.61573600024
+    },
+    {
+      "input": "je fais du sport rue des Peupliers",
+      "expected": {
+        "fullText": "rue des Peupliers",
+        "voie": "rue des Peupliers",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue des Peupliers",
+        "voie": "rue des Peupliers",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6738.501515001059
+    },
+    {
+      "input": "elle habite rue de la Fontaine",
+      "expected": {
+        "fullText": "rue de la Fontaine",
+        "voie": "rue de la Fontaine",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue de la Fontaine",
+        "voie": "rue de la Fontaine",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 7112.161418002099
+    },
+    {
+      "input": "on se voit rue de la Plage",
+      "expected": {
+        "fullText": "rue de la Plage",
+        "voie": "rue de la Plage",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue de la Plage",
+        "voie": "rue de la Plage",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6901.4749800004065
+    },
+    {
+      "input": "j'adore courir rue des Acacias",
+      "expected": {
+        "fullText": "rue des Acacias",
+        "voie": "rue des Acacias",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue des Acacias",
+        "voie": "rue des Acacias",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6955.143711000681
+    },
+    {
+      "input": "ils ont un magasin rue du Commerce",
+      "expected": {
+        "fullText": "rue du Commerce",
+        "voie": "rue du Commerce",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue du Commerce",
+        "voie": "rue du Commerce",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 5412.098923001438
+    },
+    {
+      "input": "je me promène rue des Églantines",
+      "expected": {
+        "fullText": "rue des Églantines",
+        "voie": "rue des Églantines",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue des Églantines",
+        "voie": "rue des Églantines",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6970.0677899979055
+    },
+    {
+      "input": "elle habite rue de la Liberté",
+      "expected": {
+        "fullText": "rue de la Liberté",
+        "voie": "rue de la Liberté",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue de la Liberté",
+        "voie": "rue de la Liberté",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6411.3107820004225
+    },
+    {
+      "input": "je vais à l'école rue des Érables",
+      "expected": {
+        "fullText": "rue des Érables",
+        "voie": "rue des Érables",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue des Érables",
+        "voie": "rue des Érables",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6934.686193998903
+    },
+    {
+      "input": "on se retrouve rue des Roses",
+      "expected": {
+        "fullText": "rue des Roses",
+        "voie": "rue des Roses",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue des Roses",
+        "voie": "rue des Roses",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6252.319979999214
+    },
+    {
+      "input": "je prends le métro rue de la République",
+      "expected": {
+        "fullText": "rue de la République",
+        "voie": "rue de la République",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue de la République",
+        "voie": "rue de la République",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 7261.095884997398
+    },
+    {
+      "input": "ils ont une maison rue des Bouleaux",
+      "expected": {
+        "fullText": "rue des Bouleaux",
+        "voie": "rue des Bouleaux",
+        "commune": null
+      },
+      "result": {
+        "fullText": "ils ont une maison rue des Bouleaux",
+        "voie": "rue des Bouleaux",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6830.212225001305
+    }
+  ],
+  [
+    {
+      "input": "ma mère habite au 39 rue Professeur Patel à Lyon 9",
+      "expected": {
+        "fullText": "39 rue Professeur Patel à Lyon 9",
+        "voie": "39 rue Professeur Patel",
+        "commune": "Lyon 9e Arrondissement"
+      },
+      "result": {
+        "fullText": "au 39 rue Professeur Patel à Lyon 9",
+        "voie": "rue Professeur Patel",
+        "commune": "Lyon 9e Arrondissement"
+      },
+      "score": {
+        "fullText": false,
+        "voie": false,
+        "commune": true
+      },
+      "error": null,
+      "ms": 14311.763425000012
+    },
+    {
+      "input": "je bosse rue Magenta à Tassin",
+      "expected": {
+        "fullText": "rue Magenta à Tassin",
+        "voie": "rue Magenta",
+        "commune": "Tassin-la-Demi-Lune"
+      },
+      "result": {
+        "fullText": "je bosse rue Magenta à Tassin",
+        "voie": "rue Magenta",
+        "commune": "Tassin-la-Demi-Lune"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 9330.888326000422
+    },
+    {
+      "input": "ma tante vit boulevard des Belges à Villeurban",
+      "expected": {
+        "fullText": "boulevard des Belges à Villeurban",
+        "voie": "boulevard des Belges",
+        "commune": "Villeurbanne"
+      },
+      "error": {},
+      "ms": 18190.955723002553
+    },
+    {
+      "input": "je vais souvent au parc rue de Sèze à Lyon 6",
+      "expected": {
+        "fullText": "rue de Sèze à Lyon 6",
+        "voie": "rue de Sèze",
+        "commune": "Lyon 6e Arrondissement"
+      },
+      "result": {
+        "fullText": "parc rue de Sèze à Lyon 6",
+        "voie": "rue de Sèze",
+        "commune": "Lyon 6e Arrondissement"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 9848.474895000458
+    },
+    {
+      "input": "on se retrouve au 23 rue Jean Jaurès à Bron",
+      "expected": {
+        "fullText": "23 rue Jean Jaurès à Bron",
+        "voie": "23 rue Jean Jaurès",
+        "commune": "Bron"
+      },
+      "result": {
+        "fullText": "on se retrouve au 23 rue Jean Jaurès à Bron",
+        "voie": "rue Jean Jaurès",
+        "commune": "Bron"
+      },
+      "score": {
+        "fullText": false,
+        "voie": false,
+        "commune": true
+      },
+      "error": null,
+      "ms": 10077.886899001896
+    },
+    {
+      "input": "j'ai rendez-vous rue Victor Hugo à Lyon 2e arr",
+      "expected": {
+        "fullText": "rue Victor Hugo à Lyon 2e arr",
+        "voie": "rue Victor Hugo",
+        "commune": "Lyon 2e Arrondissement"
+      },
+      "result": {
+        "fullText": "rendez-vous rue Victor Hugo à Lyon 2e Arrondissement",
+        "voie": "rue Victor Hugo",
+        "commune": "Lyon 2e Arrondissement"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 9907.871578000486
+    },
+    {
+      "input": "ils habitent au 8 allée du Parc à Caluire",
+      "expected": {
+        "fullText": "8 allée du Parc à Caluire",
+        "voie": "8 allée du Parc",
+        "commune": "Caluire-et-Cuire"
+      },
+      "result": {
+        "fullText": "ils habitent au 8 allée du Parc à Caluire",
+        "voie": "allée du Parc",
+        "commune": "Caluire"
+      },
+      "score": {
+        "fullText": false,
+        "voie": false,
+        "commune": false
+      },
+      "error": null,
+      "ms": 8190.17546299845
+    },
+    {
+      "input": "je travaille avenue de l'Europe à Mezieu",
+      "expected": {
+        "fullText": "avenue de l'Europe à Mezieu",
+        "voie": "avenue de l'Europe",
+        "commune": "Meyzieu"
+      },
+      "result": {
+        "fullText": "avenue de l'Europe à Meyzieu",
+        "voie": "avenue de l'Europe",
+        "commune": "Meyzieu"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 9620.43189899996
+    },
+    {
+      "input": "elle habite au 12 rue Franklin Roosevelt à Rieux-la-Pape",
+      "expected": {
+        "fullText": "12 rue Franklin Roosevelt à Rieux-la-Pape",
+        "voie": "12 rue Franklin Roosevelt",
+        "commune": "Rillieux-la-Pape"
+      },
+      "error": {},
+      "ms": 9976.676069997251
+    },
+    {
+      "input": "je suis passé chez toi au 10 rue Pasteur à Venissieux",
+      "expected": {
+        "fullText": "10 rue Pasteur à Venissieux",
+        "voie": "10 rue Pasteur",
+        "commune": "Vénissieux"
+      },
+      "error": {},
+      "ms": 21775.523563999683
+    },
+    {
+      "input": "on a un bureau rue de la Liberté à Saint-Priest",
+      "expected": {
+        "fullText": "rue de la Liberté à Saint-Priest",
+        "voie": "rue de la Liberté",
+        "commune": "Saint-Priest"
+      },
+      "error": {},
+      "ms": 10753.472341001034
+    },
+    {
+      "input": "ma sœur a une boutique avenue des Tuileries à Lyon 3eme",
+      "expected": {
+        "fullText": "avenue des Tuileries à Lyon 3eme",
+        "voie": "avenue des Tuileries",
+        "commune": "Lyon 3e Arrondissement"
+      },
+      "error": {},
+      "ms": 10880.067719001323
+    },
+    {
+      "input": "je connais une bonne boulangerie rue des Acacias à Saint-Fons",
+      "expected": {
+        "fullText": "rue des Acacias à Saint-Fons",
+        "voie": "rue des Acacias",
+        "commune": "Saint-Fons"
+      },
+      "error": {},
+      "ms": 21611.220989000052
+    },
+    {
+      "input": "il vit au 5 chemin de la Forêt à Dardilli",
+      "expected": {
+        "fullText": "5 chemin de la Forêt à Dardilli",
+        "voie": "5 chemin de la Forêt",
+        "commune": "Dardilly"
+      },
+      "result": {
+        "fullText": "il vit au 5 chemin de la Forêt à Dardilly",
+        "voie": "chemin de la Forêt",
+        "commune": "Dardilly"
+      },
+      "score": {
+        "fullText": false,
+        "voie": false,
+        "commune": true
+      },
+      "error": null,
+      "ms": 9514.426148999482
+    },
+    {
+      "input": "je passe souvent par la rue de la Gare à Chassieu",
+      "expected": {
+        "fullText": "rue de la Gare à Chassieu",
+        "voie": "rue de la Gare",
+        "commune": "Chassieu"
+      },
+      "error": {},
+      "ms": 17473.626073997468
+    },
+    {
+      "input": "nous avons acheté une maison rue des Écoles à Vaulx-en-Vallin",
+      "expected": {
+        "fullText": "rue des Écoles à Vaulx-en-Vallin",
+        "voie": "rue des Écoles",
+        "commune": "Vaulx-en-Velin"
+      },
+      "result": {
+        "fullText": "vous avez acheté une maison rue des Écoles à Vaulx-en-Velin",
+        "voie": "rue des Écoles",
+        "commune": "Vaulx-en-Velin"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 11470.919704999775
+    },
+    {
+      "input": "je me suis perdu rue de Verdun à Lyon 1er",
+      "expected": {
+        "fullText": "rue de Verdun à Lyon 1er",
+        "voie": "rue de Verdun",
+        "commune": "Lyon 1er Arrondissement"
+      },
+      "result": {
+        "fullText": "je me suis perdu rue de Verdun à Lyon 1er",
+        "voie": "rue de Verdun",
+        "commune": "Lyon 1er Arrondissement"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 9124.627340000123
+    },
+    {
+      "input": "on mange au restaurant rue des Marronniers à Lyon 2",
+      "expected": {
+        "fullText": "rue des Marronniers à Lyon 2",
+        "voie": "rue des Marronniers",
+        "commune": "Lyon 2e Arrondissement"
+      },
+      "result": {
+        "fullText": "on mange au restaurant rue des Marronniers à Lyon 2",
+        "voie": "rue des Marronniers",
+        "commune": "Lyon 2e Arrondissement"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 9475.364850997925
+    },
+    {
+      "input": "mon collègue habite rue de la République à Oullin",
+      "expected": {
+        "fullText": "rue de la République à Oullin",
+        "voie": "rue de la République",
+        "commune": "Oullins"
+      },
+      "result": {
+        "fullText": "rue de la République à Oullins",
+        "voie": "rue de la République",
+        "commune": "Oullins"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 10099.302823998034
+    },
+    {
+      "input": "j'ai visité un appartement rue des Pins à Francheville",
+      "expected": {
+        "fullText": "rue des Pins à Francheville",
+        "voie": "rue des Pins",
+        "commune": "Francheville"
+      },
+      "result": {
+        "fullText": "j'ai visité un appartement rue des Pins à Francheville",
+        "voie": "rue des Pins",
+        "commune": "Francheville"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 9355.528264001012
+    },
+    {
+      "input": "ils ont un atelier rue des Violettes à Decines-Charpieu",
+      "expected": {
+        "fullText": "rue des Violettes à Decines-Charpieu",
+        "voie": "rue des Violettes",
+        "commune": "Décines-Charpieu"
+      },
+      "result": {
+        "fullText": "atelier rue des Violettes à Décines-Charpieu",
+        "voie": "rue des Violettes",
+        "commune": "Décines-Charpieu"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 10226.264527998865
+    },
+    {
+      "input": "je vais à la salle de sport rue du Fort à Sainte-Foy-les-Lyon",
+      "expected": {
+        "fullText": "rue du Fort à Sainte-Foy-les-Lyon",
+        "voie": "rue du Fort",
+        "commune": "Sainte-Foy-lès-Lyon"
+      },
+      "result": {
+        "fullText": "je vais à la salle de sport rue du Fort à Sainte-Foy-les-Lyon",
+        "voie": "rue du Fort",
+        "commune": "Sainte-Foy-les-Lyon"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": false
+      },
+      "error": null,
+      "ms": 11854.089724998921
+    },
+    {
+      "input": "on a un projet immobilier rue des Rosiers à Tassin-la-Demi Lune",
+      "expected": {
+        "fullText": "rue des Rosiers à Tassin-la-Demi Lune",
+        "voie": "rue des Rosiers",
+        "commune": "Tassin-la-Demi-Lune"
+      },
+      "error": {},
+      "ms": 11253.524788998067
+    },
+    {
+      "input": "elle travaille au 18 avenue des Champs à Lyon 7eme",
+      "expected": {
+        "fullText": "18 avenue des Champs à Lyon 7eme",
+        "voie": "18 avenue des Champs",
+        "commune": "Lyon 7e Arrondissement"
+      },
+      "result": {
+        "fullText": "elle travaille au 18 avenue des Champs à Lyon 7ème",
+        "voie": "avenue des Champs",
+        "commune": "Lyon 7e Arrondissement"
+      },
+      "score": {
+        "fullText": false,
+        "voie": false,
+        "commune": true
+      },
+      "error": null,
+      "ms": 9913.943650998175
+    },
+    {
+      "input": "je passe souvent par l'avenue des Platanes à Givor",
+      "expected": {
+        "fullText": "avenue des Platanes à Givor",
+        "voie": "avenue des Platanes",
+        "commune": "Givors"
+      },
+      "result": {
+        "fullText": "j'habite avenue des Platanes à Givors",
+        "voie": "avenue des Platanes",
+        "commune": "Givors"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 8990.38608700037
+    },
+    {
+      "input": "hier je suis allé manger rue de la République",
+      "expected": {
+        "fullText": "rue de la République",
+        "voie": "rue de la République",
+        "commune": null
+      },
+      "result": {
+        "fullText": "hier je suis allé manger rue de la République",
+        "voie": "rue de la République",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 9883.565228998661
+    },
+    {
+      "input": "j'ai déménagé au 15 avenue des Frères Lumière",
+      "expected": {
+        "fullText": "15 avenue des Frères Lumière",
+        "voie": "15 avenue des Frères Lumière",
+        "commune": null
+      },
+      "result": {
+        "fullText": "au 15 avenue des Frères Lumière",
+        "voie": "avenue des Frères Lumière",
+        "commune": "Lyon"
+      },
+      "score": {
+        "fullText": false,
+        "voie": false,
+        "commune": false
+      },
+      "error": null,
+      "ms": 8783.89806599915
+    },
+    {
+      "input": "j'ai trouvé un chat perdu rue du 4 Août",
+      "expected": {
+        "fullText": "rue du 4 Août",
+        "voie": "rue du 4 Août",
+        "commune": null
+      },
+      "result": {
+        "fullText": "chat perdu rue du 4 Août",
+        "voie": "rue du 4 Août",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 7871.164638001472
+    },
+    {
+      "input": "je prends le bus rue des Cerisiers",
+      "expected": {
+        "fullText": "rue des Cerisiers",
+        "voie": "rue des Cerisiers",
+        "commune": null
+      },
+      "result": {
+        "fullText": "je prends le bus rue des Cerisiers",
+        "voie": "rue des Cerisiers",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 7865.739847000688
+    },
+    {
+      "input": "j'adore me promener rue des Jardins",
+      "expected": {
+        "fullText": "rue des Jardins",
+        "voie": "rue des Jardins",
+        "commune": null
+      },
+      "result": {
+        "fullText": "je promener rue des Jardins",
+        "voie": "rue des Jardins",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 7427.398704998195
+    },
+    {
+      "input": "on se voit au café rue des Alouettes",
+      "expected": {
+        "fullText": "rue des Alouettes",
+        "voie": "rue des Alouettes",
+        "commune": null
+      },
+      "result": {
+        "fullText": "on se voit au café rue des Alouettes",
+        "voie": "rue des Alouettes",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 7785.7365549989045
+    },
+    {
+      "input": "elle habite rue du Faubourg",
+      "expected": {
+        "fullText": "rue du Faubourg",
+        "voie": "rue du Faubourg",
+        "commune": null
+      },
+      "result": {
+        "fullText": "elle habite rue du Faubourg",
+        "voie": "rue du Faubourg",
+        "commune": "Villeurbanne"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": false
+      },
+      "error": null,
+      "ms": 7545.835590001196
+    },
+    {
+      "input": "je travaille rue de la Mairie",
+      "expected": {
+        "fullText": "rue de la Mairie",
+        "voie": "rue de la Mairie",
+        "commune": null
+      },
+      "result": {
+        "fullText": "je travaille rue de la Mairie",
+        "voie": "rue de la Mairie",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6394.4893310032785
+    },
+    {
+      "input": "on se retrouve rue des Tilleuls",
+      "expected": {
+        "fullText": "rue des Tilleuls",
+        "voie": "rue des Tilleuls",
+        "commune": null
+      },
+      "error": {},
+      "ms": 20052.133150000125
+    },
+    {
+      "input": "ils ont une boutique rue de la Poste",
+      "expected": {
+        "fullText": "rue de la Poste",
+        "voie": "rue de la Poste",
+        "commune": null
+      },
+      "error": {},
+      "ms": 22936.74111200124
+    },
+    {
+      "input": "je vis rue de la Gare",
+      "expected": {
+        "fullText": "rue de la Gare",
+        "voie": "rue de la Gare",
+        "commune": null
+      },
+      "result": {
+        "fullText": "je vis rue de la Gare",
+        "voie": "rue de la Gare",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 7435.090907000005
+    },
+    {
+      "input": "elle habite rue des Fleurs",
+      "expected": {
+        "fullText": "rue des Fleurs",
+        "voie": "rue des Fleurs",
+        "commune": null
+      },
+      "result": {
+        "fullText": "elle habite rue des Fleurs",
+        "voie": "rue des Fleurs",
+        "commune": "Villeurbanne"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": false
+      },
+      "error": null,
+      "ms": 7151.494179002941
+    },
+    {
+      "input": "je vais souvent au marché rue des Artisans",
+      "expected": {
+        "fullText": "rue des Artisans",
+        "voie": "rue des Artisans",
+        "commune": null
+      },
+      "error": {},
+      "ms": 16046.283617001027
+    },
+    {
+      "input": "on a une réunion rue de l'Église",
+      "expected": {
+        "fullText": "rue de l'Église",
+        "voie": "rue de l'Église",
+        "commune": null
+      },
+      "result": {
+        "fullText": "réunion rue de l'Église",
+        "voie": "rue de l'Église",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 7826.756386000663
+    },
+    {
+      "input": "je fais du sport rue des Peupliers",
+      "expected": {
+        "fullText": "rue des Peupliers",
+        "voie": "rue des Peupliers",
+        "commune": null
+      },
+      "result": {
+        "fullText": "je fais du sport rue des Peupliers",
+        "voie": "rue des Peupliers",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 7618.058290999383
+    },
+    {
+      "input": "elle habite rue de la Fontaine",
+      "expected": {
+        "fullText": "rue de la Fontaine",
+        "voie": "rue de la Fontaine",
+        "commune": null
+      },
+      "result": {
+        "fullText": "elle habite rue de la Fontaine",
+        "voie": "rue de la Fontaine",
+        "commune": "Vaulx-en-Velin"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": false
+      },
+      "error": null,
+      "ms": 8531.55033300072
+    },
+    {
+      "input": "on se voit rue de la Plage",
+      "expected": {
+        "fullText": "rue de la Plage",
+        "voie": "rue de la Plage",
+        "commune": null
+      },
+      "result": {
+        "fullText": "on se voit rue de la Plage",
+        "voie": "rue de la Plage",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 7626.946518998593
+    },
+    {
+      "input": "j'adore courir rue des Acacias",
+      "expected": {
+        "fullText": "rue des Acacias",
+        "voie": "rue des Acacias",
+        "commune": null
+      },
+      "error": {},
+      "ms": 18588.661711998284
+    },
+    {
+      "input": "ils ont un magasin rue du Commerce",
+      "expected": {
+        "fullText": "rue du Commerce",
+        "voie": "rue du Commerce",
+        "commune": null
+      },
+      "error": {},
+      "ms": 7344.650113999844
+    },
+    {
+      "input": "je me promène rue des Églantines",
+      "expected": {
+        "fullText": "rue des Églantines",
+        "voie": "rue des Églantines",
+        "commune": null
+      },
+      "result": {
+        "fullText": "je me promène rue des Églantines",
+        "voie": "rue des Églantines",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 7986.944497998804
+    },
+    {
+      "input": "elle habite rue de la Liberté",
+      "expected": {
+        "fullText": "rue de la Liberté",
+        "voie": "rue de la Liberté",
+        "commune": null
+      },
+      "result": {
+        "fullText": "elle habite rue de la Liberté",
+        "voie": "rue de la Liberté",
+        "commune": "Villeurbanne"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": false
+      },
+      "error": null,
+      "ms": 7606.668689001352
+    },
+    {
+      "input": "je vais à l'école rue des Érables",
+      "expected": {
+        "fullText": "rue des Érables",
+        "voie": "rue des Érables",
+        "commune": null
+      },
+      "result": {
+        "fullText": "je vais à l'école rue des Érables",
+        "voie": "rue des Érables",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 8553.003383997828
+    },
+    {
+      "input": "on se retrouve rue des Roses",
+      "expected": {
+        "fullText": "rue des Roses",
+        "voie": "rue des Roses",
+        "commune": null
+      },
+      "error": {},
+      "ms": 11276.594911001623
+    },
+    {
+      "input": "je prends le métro rue de la République",
+      "expected": {
+        "fullText": "rue de la République",
+        "voie": "rue de la République",
+        "commune": null
+      },
+      "error": {},
+      "ms": 14189.351018000394
+    },
+    {
+      "input": "ils ont une maison rue des Bouleaux",
+      "expected": {
+        "fullText": "rue des Bouleaux",
+        "voie": "rue des Bouleaux",
+        "commune": null
+      },
+      "result": {
+        "fullText": "ils ont une maison rue des Bouleaux",
+        "voie": "rue des Bouleaux",
+        "commune": "Vaulx-en-Velin"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": false
+      },
+      "error": null,
+      "ms": 8367.23236399889
+    }
+  ],
+  [
+    {
+      "input": "ma mère habite au 39 rue Professeur Patel à Lyon 9",
+      "expected": {
+        "fullText": "39 rue Professeur Patel à Lyon 9",
+        "voie": "39 rue Professeur Patel",
+        "commune": "Lyon 9e Arrondissement"
+      },
+      "error": {},
+      "ms": 10075.454224999994
+    },
+    {
+      "input": "je bosse rue Magenta à Tassin",
+      "expected": {
+        "fullText": "rue Magenta à Tassin",
+        "voie": "rue Magenta",
+        "commune": "Tassin-la-Demi-Lune"
+      },
+      "result": {
+        "fullText": "je bosse rue Magenta à Tassin",
+        "voie": "rue Magenta",
+        "commune": "Tassin-la-Demi-Lune"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6844.852507997304
+    },
+    {
+      "input": "ma tante vit boulevard des Belges à Villeurban",
+      "expected": {
+        "fullText": "boulevard des Belges à Villeurban",
+        "voie": "boulevard des Belges",
+        "commune": "Villeurbanne"
+      },
+      "result": {
+        "fullText": "ma tante vit boulevard des Belges à Villeurbanne",
+        "voie": "boulevard des Belges",
+        "commune": "Villeurbanne"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 13136.615415997803
+    },
+    {
+      "input": "je vais souvent au parc rue de Sèze à Lyon 6",
+      "expected": {
+        "fullText": "rue de Sèze à Lyon 6",
+        "voie": "rue de Sèze",
+        "commune": "Lyon 6e Arrondissement"
+      },
+      "result": {
+        "fullText": "je vais souvent au parc rue de Sèze à Lyon 6",
+        "voie": "rue de Sèze",
+        "commune": "Lyon"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": false
+      },
+      "error": null,
+      "ms": 12642.0096450001
+    },
+    {
+      "input": "on se retrouve au 23 rue Jean Jaurès à Bron",
+      "expected": {
+        "fullText": "23 rue Jean Jaurès à Bron",
+        "voie": "23 rue Jean Jaurès",
+        "commune": "Bron"
+      },
+      "result": {
+        "fullText": "on se retrouve au 23 rue Jean Jaurès à Bron",
+        "voie": "rue Jean Jaurès",
+        "commune": "Bron"
+      },
+      "score": {
+        "fullText": false,
+        "voie": false,
+        "commune": true
+      },
+      "error": null,
+      "ms": 12522.81809400022
+    },
+    {
+      "input": "j'ai rendez-vous rue Victor Hugo à Lyon 2e arr",
+      "expected": {
+        "fullText": "rue Victor Hugo à Lyon 2e arr",
+        "voie": "rue Victor Hugo",
+        "commune": "Lyon 2e Arrondissement"
+      },
+      "result": {
+        "fullText": "Rendez-vous rue Victor Hugo à Lyon 2e arrondissement",
+        "voie": "rue Victor Hugo",
+        "commune": "Lyon 2e Arrondissement"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 13999.69289200008
+    },
+    {
+      "input": "ils habitent au 8 allée du Parc à Caluire",
+      "expected": {
+        "fullText": "8 allée du Parc à Caluire",
+        "voie": "8 allée du Parc",
+        "commune": "Caluire-et-Cuire"
+      },
+      "result": {
+        "fullText": "ils habitent au 8 allée du Parc à Caluire",
+        "voie": "allée du Parc",
+        "commune": "Caluire-et-Cuire"
+      },
+      "score": {
+        "fullText": false,
+        "voie": false,
+        "commune": true
+      },
+      "error": null,
+      "ms": 12515.985111001879
+    },
+    {
+      "input": "je travaille avenue de l'Europe à Mezieu",
+      "expected": {
+        "fullText": "avenue de l'Europe à Mezieu",
+        "voie": "avenue de l'Europe",
+        "commune": "Meyzieu"
+      },
+      "result": {
+        "fullText": "je travaille avenue de l'Europe à Mezieu",
+        "voie": "avenue de l'Europe",
+        "commune": "Meyzieu"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 12431.719353999943
+    },
+    {
+      "input": "elle habite au 12 rue Franklin Roosevelt à Rieux-la-Pape",
+      "expected": {
+        "fullText": "12 rue Franklin Roosevelt à Rieux-la-Pape",
+        "voie": "12 rue Franklin Roosevelt",
+        "commune": "Rillieux-la-Pape"
+      },
+      "result": {
+        "fullText": "elle habite au 12 rue Franklin Roosevelt à Rieux-la-Pape",
+        "voie": "rue Franklin Roosevelt",
+        "commune": "Rillieux-la-Pape"
+      },
+      "score": {
+        "fullText": false,
+        "voie": false,
+        "commune": true
+      },
+      "error": null,
+      "ms": 13348.291172999889
+    },
+    {
+      "input": "je suis passé chez toi au 10 rue Pasteur à Venissieux",
+      "expected": {
+        "fullText": "10 rue Pasteur à Venissieux",
+        "voie": "10 rue Pasteur",
+        "commune": "Vénissieux"
+      },
+      "result": {
+        "fullText": "je suis passé chez moi au 10 rue Pasteur à Venissieux",
+        "voie": "rue Pasteur",
+        "commune": "Vénissieux"
+      },
+      "score": {
+        "fullText": false,
+        "voie": false,
+        "commune": true
+      },
+      "error": null,
+      "ms": 12104.135467000306
+    },
+    {
+      "input": "on a un bureau rue de la Liberté à Saint-Priest",
+      "expected": {
+        "fullText": "rue de la Liberté à Saint-Priest",
+        "voie": "rue de la Liberté",
+        "commune": "Saint-Priest"
+      },
+      "error": {},
+      "ms": 14674.813674002886
+    },
+    {
+      "input": "ma sœur a une boutique avenue des Tuileries à Lyon 3eme",
+      "expected": {
+        "fullText": "avenue des Tuileries à Lyon 3eme",
+        "voie": "avenue des Tuileries",
+        "commune": "Lyon 3e Arrondissement"
+      },
+      "result": {
+        "fullText": "ma sœur a une boutique avenue des Tuileries à Lyon 3ème",
+        "voie": "avenue des Tuileries",
+        "commune": "Lyon 3e Arrondissement"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 10033.304746996611
+    },
+    {
+      "input": "je connais une bonne boulangerie rue des Acacias à Saint-Fons",
+      "expected": {
+        "fullText": "rue des Acacias à Saint-Fons",
+        "voie": "rue des Acacias",
+        "commune": "Saint-Fons"
+      },
+      "result": {
+        "fullText": "je connais une bonne boulangerie rue des Acacias à Saint-Fons",
+        "voie": "rue des Acacias",
+        "commune": "Saint-Fons"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 14195.47946299985
+    },
+    {
+      "input": "il vit au 5 chemin de la Forêt à Dardilli",
+      "expected": {
+        "fullText": "5 chemin de la Forêt à Dardilli",
+        "voie": "5 chemin de la Forêt",
+        "commune": "Dardilly"
+      },
+      "result": {
+        "fullText": "il vit au 5 chemin de la Forêt à Dardilli",
+        "voie": "chemin de la Forêt",
+        "commune": "Dardilly"
+      },
+      "score": {
+        "fullText": false,
+        "voie": false,
+        "commune": true
+      },
+      "error": null,
+      "ms": 16605.583600997925
+    },
+    {
+      "input": "je passe souvent par la rue de la Gare à Chassieu",
+      "expected": {
+        "fullText": "rue de la Gare à Chassieu",
+        "voie": "rue de la Gare",
+        "commune": "Chassieu"
+      },
+      "result": {
+        "fullText": "je passe souvent par la rue de la Gare à Chassieu",
+        "voie": "rue de la Gare",
+        "commune": "Chassieu"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 13594.181641001254
+    },
+    {
+      "input": "nous avons acheté une maison rue des Écoles à Vaulx-en-Vallin",
+      "expected": {
+        "fullText": "rue des Écoles à Vaulx-en-Vallin",
+        "voie": "rue des Écoles",
+        "commune": "Vaulx-en-Velin"
+      },
+      "error": {},
+      "ms": 14998.317712001503
+    },
+    {
+      "input": "je me suis perdu rue de Verdun à Lyon 1er",
+      "expected": {
+        "fullText": "rue de Verdun à Lyon 1er",
+        "voie": "rue de Verdun",
+        "commune": "Lyon 1er Arrondissement"
+      },
+      "result": {
+        "fullText": "je me suis perdu rue de Verdun à Lyon 1er",
+        "voie": "rue de Verdun",
+        "commune": "Lyon 1er Arrondissement"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 8364.049929000437
+    },
+    {
+      "input": "on mange au restaurant rue des Marronniers à Lyon 2",
+      "expected": {
+        "fullText": "rue des Marronniers à Lyon 2",
+        "voie": "rue des Marronniers",
+        "commune": "Lyon 2e Arrondissement"
+      },
+      "result": {
+        "fullText": "on mange au restaurant rue des Marronniers à Lyon 2",
+        "voie": "rue des Marronniers",
+        "commune": "Lyon"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": false
+      },
+      "error": null,
+      "ms": 12534.872225999832
+    },
+    {
+      "input": "mon collègue habite rue de la République à Oullin",
+      "expected": {
+        "fullText": "rue de la République à Oullin",
+        "voie": "rue de la République",
+        "commune": "Oullins"
+      },
+      "result": {
+        "fullText": "mon collègue habite rue de la République à Oullin",
+        "voie": "rue de la République",
+        "commune": "Oullins"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 13526.546120997518
+    },
+    {
+      "input": "j'ai visité un appartement rue des Pins à Francheville",
+      "expected": {
+        "fullText": "rue des Pins à Francheville",
+        "voie": "rue des Pins",
+        "commune": "Francheville"
+      },
+      "result": {
+        "fullText": "j'ai visité un appartement rue des Pins à Francheville",
+        "voie": "rue des Pins",
+        "commune": "Francheville"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 12117.935299001634
+    },
+    {
+      "input": "ils ont un atelier rue des Violettes à Decines-Charpieu",
+      "expected": {
+        "fullText": "rue des Violettes à Decines-Charpieu",
+        "voie": "rue des Violettes",
+        "commune": "Décines-Charpieu"
+      },
+      "result": {
+        "fullText": "ils ont un atelier rue des Violettes à Decines-Charpieu",
+        "voie": "rue des Violettes",
+        "commune": "Décines-Charpieu"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 13713.107993002981
+    },
+    {
+      "input": "je vais à la salle de sport rue du Fort à Sainte-Foy-les-Lyon",
+      "expected": {
+        "fullText": "rue du Fort à Sainte-Foy-les-Lyon",
+        "voie": "rue du Fort",
+        "commune": "Sainte-Foy-lès-Lyon"
+      },
+      "result": {
+        "fullText": "je vais à la salle de sport rue du Fort à Sainte-Foy-les-Lyon",
+        "voie": "rue du Fort",
+        "commune": "Sainte-Foy-lès-Lyon"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 13560.141604002565
+    },
+    {
+      "input": "on a un projet immobilier rue des Rosiers à Tassin-la-Demi Lune",
+      "expected": {
+        "fullText": "rue des Rosiers à Tassin-la-Demi Lune",
+        "voie": "rue des Rosiers",
+        "commune": "Tassin-la-Demi-Lune"
+      },
+      "error": {},
+      "ms": 14442.674492999911
+    },
+    {
+      "input": "elle travaille au 18 avenue des Champs à Lyon 7eme",
+      "expected": {
+        "fullText": "18 avenue des Champs à Lyon 7eme",
+        "voie": "18 avenue des Champs",
+        "commune": "Lyon 7e Arrondissement"
+      },
+      "error": {},
+      "ms": 9602.767507001758
+    },
+    {
+      "input": "je passe souvent par l'avenue des Platanes à Givor",
+      "expected": {
+        "fullText": "avenue des Platanes à Givor",
+        "voie": "avenue des Platanes",
+        "commune": "Givors"
+      },
+      "result": {
+        "fullText": "l'avenue des Platanes à Givors",
+        "voie": "avenue des Platanes",
+        "commune": "Givors"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 7371.010739002377
+    },
+    {
+      "input": "hier je suis allé manger rue de la République",
+      "expected": {
+        "fullText": "rue de la République",
+        "voie": "rue de la République",
+        "commune": null
+      },
+      "result": {
+        "fullText": "hier je suis allé manger rue de la République",
+        "voie": "rue de la République",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 11142.34770900011
+    },
+    {
+      "input": "j'ai déménagé au 15 avenue des Frères Lumière",
+      "expected": {
+        "fullText": "15 avenue des Frères Lumière",
+        "voie": "15 avenue des Frères Lumière",
+        "commune": null
+      },
+      "result": {
+        "fullText": "15 avenue des Frères Lumière",
+        "voie": "avenue des Frères Lumière",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": false,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6371.509376998991
+    },
+    {
+      "input": "j'ai trouvé un chat perdu rue du 4 Août",
+      "expected": {
+        "fullText": "rue du 4 Août",
+        "voie": "rue du 4 Août",
+        "commune": null
+      },
+      "result": {
+        "fullText": "un chat perdu rue du 4 Août",
+        "voie": "rue du 4 Août",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6391.623096000403
+    },
+    {
+      "input": "je prends le bus rue des Cerisiers",
+      "expected": {
+        "fullText": "rue des Cerisiers",
+        "voie": "rue des Cerisiers",
+        "commune": null
+      },
+      "result": {
+        "fullText": "je prends le bus rue des Cerisiers",
+        "voie": "rue des Cerisiers",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6044.586102001369
+    },
+    {
+      "input": "j'adore me promener rue des Jardins",
+      "expected": {
+        "fullText": "rue des Jardins",
+        "voie": "rue des Jardins",
+        "commune": null
+      },
+      "result": {
+        "fullText": "me promener rue des Jardins",
+        "voie": "rue des Jardins",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 5946.398290999234
+    },
+    {
+      "input": "on se voit au café rue des Alouettes",
+      "expected": {
+        "fullText": "rue des Alouettes",
+        "voie": "rue des Alouettes",
+        "commune": null
+      },
+      "result": {
+        "fullText": "se voit au café rue des Alouettes",
+        "voie": "rue des Alouettes",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6733.046004001051
+    },
+    {
+      "input": "elle habite rue du Faubourg",
+      "expected": {
+        "fullText": "rue du Faubourg",
+        "voie": "rue du Faubourg",
+        "commune": null
+      },
+      "result": {
+        "fullText": "elle habite rue du Faubourg",
+        "voie": "rue du Faubourg",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6197.324267998338
+    },
+    {
+      "input": "je travaille rue de la Mairie",
+      "expected": {
+        "fullText": "rue de la Mairie",
+        "voie": "rue de la Mairie",
+        "commune": null
+      },
+      "result": {
+        "fullText": "je travaille rue de la Mairie",
+        "voie": "rue de la Mairie",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6556.192644998431
+    },
+    {
+      "input": "on se retrouve rue des Tilleuls",
+      "expected": {
+        "fullText": "rue des Tilleuls",
+        "voie": "rue des Tilleuls",
+        "commune": null
+      },
+      "result": {
+        "fullText": "on se retrouve rue des Tilleuls",
+        "voie": "rue des Tilleuls",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6798.113200999796
+    },
+    {
+      "input": "ils ont une boutique rue de la Poste",
+      "expected": {
+        "fullText": "rue de la Poste",
+        "voie": "rue de la Poste",
+        "commune": null
+      },
+      "error": {},
+      "ms": 8970.523671001196
+    },
+    {
+      "input": "je vis rue de la Gare",
+      "expected": {
+        "fullText": "rue de la Gare",
+        "voie": "rue de la Gare",
+        "commune": null
+      },
+      "result": {
+        "fullText": "je vis rue de la Gare",
+        "voie": "rue de la Gare",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 5994.862273000181
+    },
+    {
+      "input": "elle habite rue des Fleurs",
+      "expected": {
+        "fullText": "rue des Fleurs",
+        "voie": "rue des Fleurs",
+        "commune": null
+      },
+      "result": {
+        "fullText": "elle habite rue des Fleurs",
+        "voie": "rue des Fleurs",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 5806.132739000022
+    },
+    {
+      "input": "je vais souvent au marché rue des Artisans",
+      "expected": {
+        "fullText": "rue des Artisans",
+        "voie": "rue des Artisans",
+        "commune": null
+      },
+      "error": {},
+      "ms": 10458.990777999163
+    },
+    {
+      "input": "on a une réunion rue de l'Église",
+      "expected": {
+        "fullText": "rue de l'Église",
+        "voie": "rue de l'Église",
+        "commune": null
+      },
+      "result": {
+        "fullText": "on a une réunion rue de l'Église",
+        "voie": "rue de l'Église",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 7397.843005001545
+    },
+    {
+      "input": "je fais du sport rue des Peupliers",
+      "expected": {
+        "fullText": "rue des Peupliers",
+        "voie": "rue des Peupliers",
+        "commune": null
+      },
+      "result": {
+        "fullText": "je fais du sport rue des Peupliers",
+        "voie": "rue des Peupliers",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6820.279232002795
+    },
+    {
+      "input": "elle habite rue de la Fontaine",
+      "expected": {
+        "fullText": "rue de la Fontaine",
+        "voie": "rue de la Fontaine",
+        "commune": null
+      },
+      "result": {
+        "fullText": "elle habite rue de la Fontaine",
+        "voie": "rue de la Fontaine",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 5736.86237199977
+    },
+    {
+      "input": "on se voit rue de la Plage",
+      "expected": {
+        "fullText": "rue de la Plage",
+        "voie": "rue de la Plage",
+        "commune": null
+      },
+      "result": {
+        "fullText": "on se voit rue de la Plage",
+        "voie": "rue de la Plage",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6546.448442000896
+    },
+    {
+      "input": "j'adore courir rue des Acacias",
+      "expected": {
+        "fullText": "rue des Acacias",
+        "voie": "rue des Acacias",
+        "commune": null
+      },
+      "result": {
+        "fullText": "j'adore courir rue des Acacias",
+        "voie": "rue des Acacias",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6985.064738001674
+    },
+    {
+      "input": "ils ont un magasin rue du Commerce",
+      "expected": {
+        "fullText": "rue du Commerce",
+        "voie": "rue du Commerce",
+        "commune": null
+      },
+      "result": {
+        "fullText": "ils ont un magasin rue du Commerce",
+        "voie": "rue du Commerce",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6099.981866002083
+    },
+    {
+      "input": "je me promène rue des Églantines",
+      "expected": {
+        "fullText": "rue des Églantines",
+        "voie": "rue des Églantines",
+        "commune": null
+      },
+      "result": {
+        "fullText": "je me promène rue des Églantines",
+        "voie": "rue des Églantines",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6893.802786000073
+    },
+    {
+      "input": "elle habite rue de la Liberté",
+      "expected": {
+        "fullText": "rue de la Liberté",
+        "voie": "rue de la Liberté",
+        "commune": null
+      },
+      "result": {
+        "fullText": "elle habite rue de la Liberté",
+        "voie": "rue de la Liberté",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6297.529456000775
+    },
+    {
+      "input": "je vais à l'école rue des Érables",
+      "expected": {
+        "fullText": "rue des Érables",
+        "voie": "rue des Érables",
+        "commune": null
+      },
+      "result": {
+        "fullText": "je vais à l'école rue des Érables",
+        "voie": "rue des Érables",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6762.1198320016265
+    },
+    {
+      "input": "on se retrouve rue des Roses",
+      "expected": {
+        "fullText": "rue des Roses",
+        "voie": "rue des Roses",
+        "commune": null
+      },
+      "result": {
+        "fullText": "on se retrouve rue des Roses",
+        "voie": "rue des Roses",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6213.705814998597
+    },
+    {
+      "input": "je prends le métro rue de la République",
+      "expected": {
+        "fullText": "rue de la République",
+        "voie": "rue de la République",
+        "commune": null
+      },
+      "error": {},
+      "ms": 11589.477191001177
+    },
+    {
+      "input": "ils ont une maison rue des Bouleaux",
+      "expected": {
+        "fullText": "rue des Bouleaux",
+        "voie": "rue des Bouleaux",
+        "commune": null
+      },
+      "result": {
+        "fullText": "ils ont une maison rue des Bouleaux",
+        "voie": "rue des Bouleaux",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6392.182965002954
+    }
+  ],
+  [
+    {
+      "input": "ma mère habite au 39 rue Professeur Patel à Lyon 9",
+      "expected": {
+        "fullText": "39 rue Professeur Patel à Lyon 9",
+        "voie": "39 rue Professeur Patel",
+        "commune": "Lyon 9e Arrondissement"
+      },
+      "result": {
+        "fullText": "rue Professeur Patel à Lyon 9",
+        "voie": "rue Professeur Patel",
+        "commune": "Lyon"
+      },
+      "score": {
+        "fullText": false,
+        "voie": false,
+        "commune": false
+      },
+      "error": null,
+      "ms": 8820.05276099965
+    },
+    {
+      "input": "je bosse rue Magenta à Tassin",
+      "expected": {
+        "fullText": "rue Magenta à Tassin",
+        "voie": "rue Magenta",
+        "commune": "Tassin-la-Demi-Lune"
+      },
+      "result": {
+        "fullText": "rue Magenta à Tassin",
+        "voie": "rue Magenta",
+        "commune": "Tassin-la-Demi-Lune"
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 10915.276661999524
+    },
+    {
+      "input": "ma tante vit boulevard des Belges à Villeurban",
+      "expected": {
+        "fullText": "boulevard des Belges à Villeurban",
+        "voie": "boulevard des Belges",
+        "commune": "Villeurbanne"
+      },
+      "result": {
+        "fullText": "boulevard des Belges à Villeurban",
+        "voie": "boulevard des Belges",
+        "commune": "Villeurbanne"
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 11205.118346001953
+    },
+    {
+      "input": "je vais souvent au parc rue de Sèze à Lyon 6",
+      "expected": {
+        "fullText": "rue de Sèze à Lyon 6",
+        "voie": "rue de Sèze",
+        "commune": "Lyon 6e Arrondissement"
+      },
+      "result": {
+        "fullText": "parc rue de Sèze à Lyon 6",
+        "voie": "rue de Sèze",
+        "commune": "Lyon"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": false
+      },
+      "error": null,
+      "ms": 11667.615231998265
+    },
+    {
+      "input": "on se retrouve au 23 rue Jean Jaurès à Bron",
+      "expected": {
+        "fullText": "23 rue Jean Jaurès à Bron",
+        "voie": "23 rue Jean Jaurès",
+        "commune": "Bron"
+      },
+      "result": {
+        "fullText": "23 rue Jean Jaurès à Bron",
+        "voie": "rue Jean Jaurès",
+        "commune": "Bron"
+      },
+      "score": {
+        "fullText": true,
+        "voie": false,
+        "commune": true
+      },
+      "error": null,
+      "ms": 11137.034017000347
+    },
+    {
+      "input": "j'ai rendez-vous rue Victor Hugo à Lyon 2e arr",
+      "expected": {
+        "fullText": "rue Victor Hugo à Lyon 2e arr",
+        "voie": "rue Victor Hugo",
+        "commune": "Lyon 2e Arrondissement"
+      },
+      "result": {
+        "fullText": "rue Victor Hugo à Lyon 2e arr",
+        "voie": "rue Victor Hugo",
+        "commune": "Lyon"
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": false
+      },
+      "error": null,
+      "ms": 11131.30420299992
+    },
+    {
+      "input": "ils habitent au 8 allée du Parc à Caluire",
+      "expected": {
+        "fullText": "8 allée du Parc à Caluire",
+        "voie": "8 allée du Parc",
+        "commune": "Caluire-et-Cuire"
+      },
+      "result": {
+        "fullText": "au 8 allée du Parc à Caluire",
+        "voie": "allée du Parc",
+        "commune": "Caluire-et-Cuire"
+      },
+      "score": {
+        "fullText": false,
+        "voie": false,
+        "commune": true
+      },
+      "error": null,
+      "ms": 11369.531114000827
+    },
+    {
+      "input": "je travaille avenue de l'Europe à Mezieu",
+      "expected": {
+        "fullText": "avenue de l'Europe à Mezieu",
+        "voie": "avenue de l'Europe",
+        "commune": "Meyzieu"
+      },
+      "result": {
+        "fullText": "avenue de l'Europe à Mezieu",
+        "voie": "avenue de l'Europe",
+        "commune": "Meyzieu"
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 12081.944019000977
+    },
+    {
+      "input": "elle habite au 12 rue Franklin Roosevelt à Rieux-la-Pape",
+      "expected": {
+        "fullText": "12 rue Franklin Roosevelt à Rieux-la-Pape",
+        "voie": "12 rue Franklin Roosevelt",
+        "commune": "Rillieux-la-Pape"
+      },
+      "result": {
+        "fullText": "au 12 rue Franklin Roosevelt à Rieux-la-Pape",
+        "voie": "rue Franklin Roosevelt",
+        "commune": "Rillieux-la-Pape"
+      },
+      "score": {
+        "fullText": false,
+        "voie": false,
+        "commune": true
+      },
+      "error": null,
+      "ms": 13542.439225003123
+    },
+    {
+      "input": "je suis passé chez toi au 10 rue Pasteur à Venissieux",
+      "expected": {
+        "fullText": "10 rue Pasteur à Venissieux",
+        "voie": "10 rue Pasteur",
+        "commune": "Vénissieux"
+      },
+      "result": {
+        "fullText": "10 rue Pasteur à Venissieux",
+        "voie": "rue Pasteur",
+        "commune": "Vénissieux"
+      },
+      "score": {
+        "fullText": true,
+        "voie": false,
+        "commune": true
+      },
+      "error": null,
+      "ms": 12347.710477001965
+    },
+    {
+      "input": "on a un bureau rue de la Liberté à Saint-Priest",
+      "expected": {
+        "fullText": "rue de la Liberté à Saint-Priest",
+        "voie": "rue de la Liberté",
+        "commune": "Saint-Priest"
+      },
+      "result": {
+        "fullText": "bureau rue de la Liberté à Saint-Priest",
+        "voie": "rue de la Liberté",
+        "commune": "Saint-Priest"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 12306.448538001627
+    },
+    {
+      "input": "ma sœur a une boutique avenue des Tuileries à Lyon 3eme",
+      "expected": {
+        "fullText": "avenue des Tuileries à Lyon 3eme",
+        "voie": "avenue des Tuileries",
+        "commune": "Lyon 3e Arrondissement"
+      },
+      "result": {
+        "fullText": "avenue des Tuileries à Lyon 3eme",
+        "voie": "avenue des Tuileries",
+        "commune": "Lyon"
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": false
+      },
+      "error": null,
+      "ms": 12339.413975000381
+    },
+    {
+      "input": "je connais une bonne boulangerie rue des Acacias à Saint-Fons",
+      "expected": {
+        "fullText": "rue des Acacias à Saint-Fons",
+        "voie": "rue des Acacias",
+        "commune": "Saint-Fons"
+      },
+      "result": {
+        "fullText": "rue des Acacias à Saint-Fons",
+        "voie": "rue des Acacias",
+        "commune": "Saint-Fons"
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 11513.83611600101
+    },
+    {
+      "input": "il vit au 5 chemin de la Forêt à Dardilli",
+      "expected": {
+        "fullText": "5 chemin de la Forêt à Dardilli",
+        "voie": "5 chemin de la Forêt",
+        "commune": "Dardilly"
+      },
+      "result": {
+        "fullText": "au 5 chemin de la Forêt à Dardilli",
+        "voie": "chemin de la Forêt",
+        "commune": "Dardilly"
+      },
+      "score": {
+        "fullText": false,
+        "voie": false,
+        "commune": true
+      },
+      "error": null,
+      "ms": 12711.635347999632
+    },
+    {
+      "input": "je passe souvent par la rue de la Gare à Chassieu",
+      "expected": {
+        "fullText": "rue de la Gare à Chassieu",
+        "voie": "rue de la Gare",
+        "commune": "Chassieu"
+      },
+      "result": {
+        "fullText": "rue de la Gare à Chassieu",
+        "voie": "rue de la Gare",
+        "commune": "Chassieu"
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 11671.90616299957
+    },
+    {
+      "input": "nous avons acheté une maison rue des Écoles à Vaulx-en-Vallin",
+      "expected": {
+        "fullText": "rue des Écoles à Vaulx-en-Vallin",
+        "voie": "rue des Écoles",
+        "commune": "Vaulx-en-Velin"
+      },
+      "result": {
+        "fullText": "rue des Écoles à Vaulx-en-Villain",
+        "voie": "rue des Écoles",
+        "commune": "Vaulx-en-Velin"
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 12773.228278998286
+    },
+    {
+      "input": "je me suis perdu rue de Verdun à Lyon 1er",
+      "expected": {
+        "fullText": "rue de Verdun à Lyon 1er",
+        "voie": "rue de Verdun",
+        "commune": "Lyon 1er Arrondissement"
+      },
+      "result": {
+        "fullText": "rue de Verdun à Lyon 1er",
+        "voie": "rue de Verdun",
+        "commune": "Lyon"
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": false
+      },
+      "error": null,
+      "ms": 11358.055282000452
+    },
+    {
+      "input": "on mange au restaurant rue des Marronniers à Lyon 2",
+      "expected": {
+        "fullText": "rue des Marronniers à Lyon 2",
+        "voie": "rue des Marronniers",
+        "commune": "Lyon 2e Arrondissement"
+      },
+      "result": {
+        "fullText": "rue des Marronniers à Lyon 2",
+        "voie": "rue des Marronniers",
+        "commune": "Lyon"
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": false
+      },
+      "error": null,
+      "ms": 11460.812235999852
+    },
+    {
+      "input": "mon collègue habite rue de la République à Oullin",
+      "expected": {
+        "fullText": "rue de la République à Oullin",
+        "voie": "rue de la République",
+        "commune": "Oullins"
+      },
+      "result": {
+        "fullText": "rue de la République à Oullin",
+        "voie": "rue de la République",
+        "commune": "Oullins"
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 11869.719486001879
+    },
+    {
+      "input": "j'ai visité un appartement rue des Pins à Francheville",
+      "expected": {
+        "fullText": "rue des Pins à Francheville",
+        "voie": "rue des Pins",
+        "commune": "Francheville"
+      },
+      "result": {
+        "fullText": "rue des Pins à Francheville",
+        "voie": "rue des Pins",
+        "commune": "Francheville"
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 11099.1955730021
+    },
+    {
+      "input": "ils ont un atelier rue des Violettes à Decines-Charpieu",
+      "expected": {
+        "fullText": "rue des Violettes à Decines-Charpieu",
+        "voie": "rue des Violettes",
+        "commune": "Décines-Charpieu"
+      },
+      "result": {
+        "fullText": "rue des Violettes à Decines-Charpieu",
+        "voie": "rue des Violettes",
+        "commune": "Décines-Charpieu"
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 12154.333638001233
+    },
+    {
+      "input": "je vais à la salle de sport rue du Fort à Sainte-Foy-les-Lyon",
+      "expected": {
+        "fullText": "rue du Fort à Sainte-Foy-les-Lyon",
+        "voie": "rue du Fort",
+        "commune": "Sainte-Foy-lès-Lyon"
+      },
+      "result": {
+        "fullText": "rue du Fort à Sainte-Foy-les-Lyon",
+        "voie": "rue du Fort",
+        "commune": "Sainte-Foy-lès-Lyon"
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 12390.446932997555
+    },
+    {
+      "input": "on a un projet immobilier rue des Rosiers à Tassin-la-Demi Lune",
+      "expected": {
+        "fullText": "rue des Rosiers à Tassin-la-Demi Lune",
+        "voie": "rue des Rosiers",
+        "commune": "Tassin-la-Demi-Lune"
+      },
+      "result": {
+        "fullText": "rue des Rosiers à Tassin-la-Demi Lune",
+        "voie": "rue des Rosiers",
+        "commune": "Tassin-la-Demi-Lune"
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 13296.609149999917
+    },
+    {
+      "input": "elle travaille au 18 avenue des Champs à Lyon 7eme",
+      "expected": {
+        "fullText": "18 avenue des Champs à Lyon 7eme",
+        "voie": "18 avenue des Champs",
+        "commune": "Lyon 7e Arrondissement"
+      },
+      "result": {
+        "fullText": "au 18 avenue des Champs à Lyon 7eme",
+        "voie": "avenue des Champs",
+        "commune": "Lyon"
+      },
+      "score": {
+        "fullText": false,
+        "voie": false,
+        "commune": false
+      },
+      "error": null,
+      "ms": 11548.052215002477
+    },
+    {
+      "input": "je passe souvent par l'avenue des Platanes à Givor",
+      "expected": {
+        "fullText": "avenue des Platanes à Givor",
+        "voie": "avenue des Platanes",
+        "commune": "Givors"
+      },
+      "result": {
+        "fullText": "l'avenue des Platanes à Givor",
+        "voie": "l'avenue des Platanes",
+        "commune": "Givors"
+      },
+      "score": {
+        "fullText": false,
+        "voie": false,
+        "commune": true
+      },
+      "error": null,
+      "ms": 11630.531648997217
+    },
+    {
+      "input": "hier je suis allé manger rue de la République",
+      "expected": {
+        "fullText": "rue de la République",
+        "voie": "rue de la République",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue de la République",
+        "voie": "rue de la République",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 10209.802820000798
+    },
+    {
+      "input": "j'ai déménagé au 15 avenue des Frères Lumière",
+      "expected": {
+        "fullText": "15 avenue des Frères Lumière",
+        "voie": "15 avenue des Frères Lumière",
+        "commune": null
+      },
+      "result": {
+        "fullText": "au 15 avenue des Frères Lumière",
+        "voie": "avenue des Frères Lumière",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": false,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6737.937653999776
+    },
+    {
+      "input": "j'ai trouvé un chat perdu rue du 4 Août",
+      "expected": {
+        "fullText": "rue du 4 Août",
+        "voie": "rue du 4 Août",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue du 4 Août",
+        "voie": "rue du 4 Août",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6079.182443000376
+    },
+    {
+      "input": "je prends le bus rue des Cerisiers",
+      "expected": {
+        "fullText": "rue des Cerisiers",
+        "voie": "rue des Cerisiers",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue des Cerisiers",
+        "voie": "rue des Cerisiers",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 5789.410879999399
+    },
+    {
+      "input": "j'adore me promener rue des Jardins",
+      "expected": {
+        "fullText": "rue des Jardins",
+        "voie": "rue des Jardins",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue des Jardins",
+        "voie": "rue des Jardins",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 5922.481739997864
+    },
+    {
+      "input": "on se voit au café rue des Alouettes",
+      "expected": {
+        "fullText": "rue des Alouettes",
+        "voie": "rue des Alouettes",
+        "commune": null
+      },
+      "result": {
+        "fullText": "café rue des Alouettes",
+        "voie": "rue des Alouettes",
+        "commune": null
+      },
+      "score": {
+        "fullText": false,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6032.776915997267
+    },
+    {
+      "input": "elle habite rue du Faubourg",
+      "expected": {
+        "fullText": "rue du Faubourg",
+        "voie": "rue du Faubourg",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue du Faubourg",
+        "voie": "rue du Faubourg",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6176.846531998366
+    },
+    {
+      "input": "je travaille rue de la Mairie",
+      "expected": {
+        "fullText": "rue de la Mairie",
+        "voie": "rue de la Mairie",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue de la Mairie",
+        "voie": "rue de la Mairie",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6281.428458999842
+    },
+    {
+      "input": "on se retrouve rue des Tilleuls",
+      "expected": {
+        "fullText": "rue des Tilleuls",
+        "voie": "rue des Tilleuls",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue des Tilleuls",
+        "voie": "rue des Tilleuls",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 5667.135577999055
+    },
+    {
+      "input": "ils ont une boutique rue de la Poste",
+      "expected": {
+        "fullText": "rue de la Poste",
+        "voie": "rue de la Poste",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue de la Poste",
+        "voie": "rue de la Poste",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 5610.294619999826
+    },
+    {
+      "input": "je vis rue de la Gare",
+      "expected": {
+        "fullText": "rue de la Gare",
+        "voie": "rue de la Gare",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue de la Gare",
+        "voie": "rue de la Gare",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 5482.1018269993365
+    },
+    {
+      "input": "elle habite rue des Fleurs",
+      "expected": {
+        "fullText": "rue des Fleurs",
+        "voie": "rue des Fleurs",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue des Fleurs",
+        "voie": "rue des Fleurs",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 5214.2229259982705
+    },
+    {
+      "input": "je vais souvent au marché rue des Artisans",
+      "expected": {
+        "fullText": "rue des Artisans",
+        "voie": "rue des Artisans",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue des Artisans",
+        "voie": "rue des Artisans",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 5376.98436300084
+    },
+    {
+      "input": "on a une réunion rue de l'Église",
+      "expected": {
+        "fullText": "rue de l'Église",
+        "voie": "rue de l'Église",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue de l'Église",
+        "voie": "rue de l'Église",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6489.536758001894
+    },
+    {
+      "input": "je fais du sport rue des Peupliers",
+      "expected": {
+        "fullText": "rue des Peupliers",
+        "voie": "rue des Peupliers",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue des Peupliers",
+        "voie": "rue des Peupliers",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 5641.113175000995
+    },
+    {
+      "input": "elle habite rue de la Fontaine",
+      "expected": {
+        "fullText": "rue de la Fontaine",
+        "voie": "rue de la Fontaine",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue de la Fontaine",
+        "voie": "rue de la Fontaine",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 5497.337237000465
+    },
+    {
+      "input": "on se voit rue de la Plage",
+      "expected": {
+        "fullText": "rue de la Plage",
+        "voie": "rue de la Plage",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue de la Plage",
+        "voie": "rue de la Plage",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 5757.940737001598
+    },
+    {
+      "input": "j'adore courir rue des Acacias",
+      "expected": {
+        "fullText": "rue des Acacias",
+        "voie": "rue des Acacias",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue des Acacias",
+        "voie": "rue des Acacias",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 5580.823346000165
+    },
+    {
+      "input": "ils ont un magasin rue du Commerce",
+      "expected": {
+        "fullText": "rue du Commerce",
+        "voie": "rue du Commerce",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue du Commerce",
+        "voie": "rue du Commerce",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 5127.265985000879
+    },
+    {
+      "input": "je me promène rue des Églantines",
+      "expected": {
+        "fullText": "rue des Églantines",
+        "voie": "rue des Églantines",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue des Églantines",
+        "voie": "rue des Églantines",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6111.91570200026
+    },
+    {
+      "input": "elle habite rue de la Liberté",
+      "expected": {
+        "fullText": "rue de la Liberté",
+        "voie": "rue de la Liberté",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue de la Liberté",
+        "voie": "rue de la Liberté",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 5520.816121000797
+    },
+    {
+      "input": "je vais à l'école rue des Érables",
+      "expected": {
+        "fullText": "rue des Érables",
+        "voie": "rue des Érables",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue des Érables",
+        "voie": "rue des Érables",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 5787.761686999351
+    },
+    {
+      "input": "on se retrouve rue des Roses",
+      "expected": {
+        "fullText": "rue des Roses",
+        "voie": "rue des Roses",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue des Roses",
+        "voie": "rue des Roses",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 4910.251430999488
+    },
+    {
+      "input": "je prends le métro rue de la République",
+      "expected": {
+        "fullText": "rue de la République",
+        "voie": "rue de la République",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue de la République",
+        "voie": "rue de la République",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 6553.828873001039
+    },
+    {
+      "input": "ils ont une maison rue des Bouleaux",
+      "expected": {
+        "fullText": "rue des Bouleaux",
+        "voie": "rue des Bouleaux",
+        "commune": null
+      },
+      "result": {
+        "fullText": "rue des Bouleaux",
+        "voie": "rue des Bouleaux",
+        "commune": null
+      },
+      "score": {
+        "fullText": true,
+        "voie": true,
+        "commune": true
+      },
+      "error": null,
+      "ms": 5780.8908469974995
+    }
+  ]
+]

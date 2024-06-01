@@ -350,7 +350,53 @@ async function simpleChat() {
       messages: [
         {
           role: 'system',
-          content: 'Answer in french. ALWAYS ACT AS IF YOU WERE A REAL HUMAN. ANSWER LIKE A HUMAN. NEVER MENTION THAT YOU ARE AN AI OR A LANGUAGE MODEL.',
+          content: `Voici une liste d'adresses :
+          - Place Emile Zola;Saint-Priest
+          - Place Ferdinand Buisson;Saint-Priest
+          - Place Honoré de Balzac;Saint-Priest
+          - Place Jean-François Millet;Saint-Priest
+          - Place Laurent Bonnevay;Saint-Priest
+          - Place Louis Favard;Saint-Priest
+          - Place Molière;Saint-Priest
+          - Place Paul Cézanne;Saint-Priest
+          - Place Paul Claudel;Saint-Priest
+          - Place Roger Salengro;Saint-Priest
+          - 1ère Rue Cité Berliet;Saint-Priest
+          - 14ème Rue Cité Berliet;Saint-Priest
+          - Route d'Heyrieux;Saint-Priest
+          - Route de Grenoble;Saint-Priest
+          - Route de Lyon;Saint-Priest
+          - Route de Manissieux;Saint-Priest
+          - Route de Mions;Saint-Priest
+          - Route de Toussieu;Saint-Priest
+          - Route de Saint-Symphorien d'Ozon;Saint-Priest
+          - Rue Alexandre Dumas;Saint-Priest
+          - Rue Alexandre Grammont;Saint-Priest
+          - Rue Alfred de Musset;Saint-Priest
+          - Rue Alfred de Vigny;Saint-Priest
+          - Rue Alphonse Daudet;Saint-Priest
+          - Rue Ambroise Paré;Saint-Priest
+          - Rue Anatole France;Saint-Priest
+          - Rue André Chénier;Saint-Priest
+          - Rue Aristide Briand;Saint-Priest
+          - Rue Arthur Rimbaud;Saint-Priest
+          - Rue Baptiste Marcet;Saint-Priest
+          - Rue Baudelaire;Saint-Priest
+          - Rue Beauséjour;Saint-Priest
+          - Rue Bel Air;Saint-Priest
+          - Rue Blériot;Saint-Priest
+          - Rue Boileau;Saint-Priest
+          - Rue Bossuet;Saint-Priest
+          - Rue Branly;Saint-Priest
+          - Rue Calmette;Saint-Priest
+          - Rue Camille Desmoulins;Saint-Priest
+          - Rue Charles Gounod;Saint-Priest
+          - Rue Charles Perrault;Saint-Priest
+          - Rue Chrysostome;Saint-Priest
+          
+You will be provided user input. Find the best match in the list.
+Answer with the exact line corresponding to the data you have in your context.`,
+//           content: 'Answer in french. ALWAYS ACT AS IF YOU WERE A REAL HUMAN. ANSWER LIKE A HUMAN. NEVER MENTION THAT YOU ARE AN AI OR A LANGUAGE MODEL.',
         }
       ],
     }),
@@ -366,8 +412,13 @@ async function simpleChat() {
     const query = await rl.question('[User]: ');
     const answer = await chat.chat({
       message: query,
+      stream: true,
     });
-    console.log(answer.response);
+    // console.log(answer.response);
+    for await (const chunk of answer) {
+      process.stdout.write(chunk.response);
+      // process.stdout.write(chunk.response.delta);
+    }
   }
 }
 
@@ -478,8 +529,28 @@ async function audio() {
     // ret.on('error', (e) => console.error(e));
     // ret.on('message', (m) => console.log(m));
     console.log('done');
-  }, 2000);
+  }, 7000);
 
 }
 
-audio().catch(console.error);
+
+async function start () {
+	const args = process.argv;
+
+  const method = args[2];
+
+  switch (method) {
+    case 'audio': {
+      return audio();
+    }
+    case 'chat': {
+      return simpleChat();
+    }
+    default: {
+      console.log('You must specify a method');
+      return;
+    }
+  }
+}
+
+void start().catch(console.error);
